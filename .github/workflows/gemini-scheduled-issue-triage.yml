@@ -1,14 +1,12 @@
 name: Gemini Scheduled Issue Triage
 
 on:
-  schedule:
-    - cron: '0 * * * *' # Runs every hour
   workflow_dispatch: {}
 
 jobs:
   triage-issues:
     timeout-minutes: 10
-    if: ${{ github.repository == 'google-gemini/gemini-cli' }}
+    if: ${{ github.repository == 'sttor/gemini-cli' }}
     runs-on: ubuntu-latest
     permissions:
       contents: read
