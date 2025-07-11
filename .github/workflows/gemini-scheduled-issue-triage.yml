@@ -60,10 +60,10 @@ jobs:
                 "run_shell_command(gh issue list)"
               ],
               "telemetry": {
-                "enabled": true,
+                "enabled": false,
                 "target": "gcp"
               },
-              "sandbox": false
+              "sandbox": true
             }
           prompt: |
             You are an issue triage assistant. Analyze issues and apply appropriate labels ONE AT A TIME.
