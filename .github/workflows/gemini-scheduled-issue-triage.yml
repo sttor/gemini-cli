@@ -49,8 +49,8 @@ jobs:
         with:
           version: 0.1.8-rc.0
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          OTLP_GCP_WIF_PROVIDER: ${{ secrets.OTLP_GCP_WIF_PROVIDER }}
-          OTLP_GOOGLE_CLOUD_PROJECT: ${{ secrets.OTLP_GOOGLE_CLOUD_PROJECT }}
+          #OTLP_GCP_WIF_PROVIDER: ${{ secrets.OTLP_GCP_WIF_PROVIDER }}
+          #OTLP_GOOGLE_CLOUD_PROJECT: ${{ secrets.OTLP_GOOGLE_CLOUD_PROJECT }}
           settings_json: |
             {
               "coreTools": [
@@ -58,12 +58,7 @@ jobs:
                 "run_shell_command(gh label list)",
                 "run_shell_command(gh issue edit)",
                 "run_shell_command(gh issue list)"
-              ],
-              "telemetry": {
-                "enabled": false,
-                "target": "gcp"
-              },
-              "sandbox": true
+              ]
             }
           prompt: |
             You are an issue triage assistant. Analyze issues and apply appropriate labels ONE AT A TIME.
